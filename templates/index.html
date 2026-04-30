@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💰 AI Expense Tracker</h1>
+
+    <!-- ADD EXPENSE -->
+    <div class="card">
+        <h3>Add Expense</h3>
+        <form action="/add" method="post">
+            <input name="amount" placeholder="Enter Amount" required>
+            <input name="description" placeholder="Enter Description" required>
+            <br><br>
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="card">
+        <h3>Dashboard</h3>
+
+        
+
+        <!-- BUDGET -->
+        <form action="/budget" method="post" class="budget-box">
+            <input name="budget" placeholder="Enter Budget">
+        
+            <button type="submit">  💰 Check Budget</button>
+        </form>
+        <br><br>
+          <a href="/show"><button>📄 Show Expenses</button></a>
+          <a href="/report"><button >📊 Category Report</button></a>
+          <a href="/monthly"><button >📅 Monthly Report</button></a>
+          <a href="/charts"><button >📊 Charts</button></a>
+        <br><br>
+        
+
+    </div>
+
+</div>
+
+</body>
+</html>

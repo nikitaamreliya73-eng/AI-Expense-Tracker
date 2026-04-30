@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Expenses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📄 All Expenses</h1>
+
+<div class="card">
+    {{ table|safe }}
+</div>
+
+<a href="/"><button>⬅ Back</button></a>
+
+</div>
+
+</body>
+</html>

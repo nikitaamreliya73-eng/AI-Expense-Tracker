@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 Budget Check</h1>
+
+{% if total %}
+<div class="card">
+    <p>Total Spending: ₹{{ total }}</p>
+    <p>Budget: ₹{{ budget }}</p>
+
+    <p class="{{ 'status-good' if total <= budget else 'status-bad' }}">
+        {{ status }}
+    </p>
+</div>
+{% endif %}
+
+<a href="/"><button>⬅ Back</button></a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Expense Dashboard</h1>
+
+    <!-- PIE CHART -->
+    <div class="card">
+        <h2>📌 Category Distribution</h2>
+        <img src="{{ url_for('static', filename='pie.png') }}">
+    </div>
+
+    <!-- BAR CHART -->
+    <div class="card">
+        <h2>📊 Category-wise Spending</h2>
+        <img src="{{ url_for('static', filename='bar.png') }}">
+    </div>
+
+    <a href="/">
+        <button class="main-btn">⬅ Back to Dashboard</button>
+    </a>
+
+</div>
+
+</body>
+</html>
